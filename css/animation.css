@@ -7,7 +7,6 @@
 }
 .dots-container {
   display: flex;
-  /* position: relative; */
   height: 400px;
   width: 400px;
   margin: 0 auto;
@@ -31,7 +30,6 @@
   animation-fill-mode: both;
 }
 .dot {
-  /* position: relative; */
   width: 20px;
   height: 20px;
   background-color: rgb(0, 0, 0);
@@ -46,7 +44,6 @@
     scale: 1;
   }
   25% {
-    /* translate: 0 50px; */
     opacity: 1;
     scale: 1.4;
   }
@@ -56,7 +53,6 @@
     scale: 1;
   }
   75% {
-    /* translate: 0 50px; */
     opacity: 0;
     scale: 0.6;
   }
@@ -69,7 +65,6 @@
     scale: 1;
   }
   25% {
-    /* translate: 0 -50px; */
     opacity: 0;
     scale: 0.6;
   }
@@ -79,12 +74,11 @@
     scale: 1;
   }
   75% {
-    /* translate: 0 -50px; */
     opacity: 1;
     scale: 1.4;
   }
 }
-/* dot-1 */
+
 .dot1 .dot:nth-child(1) {
   animation-delay: 0s;
 }
@@ -106,7 +100,7 @@
 .dot1 .dot:nth-child(7) {
   animation-delay: 1.8s;
 }
-/* dot2 */
+
 .dot2 .dot:nth-child(1) {
   animation-delay: 0s;
 }
