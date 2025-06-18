@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/product.css" />
+
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="product-card">
+          <input type="radio" name="color" id="green" hidden />
+          <input type="radio" name="color" id="purple" hidden />
+          <input type="radio" name="color" id="orange" hidden />
+          <input type="radio" name="color" id="pink" hidden />
+
+          <div class="cart">
+            <i class="fa-solid fa-cart-plus"></i>
+          </div>
+          <!-- img product -->
+          <div class="img">
+            <img src="./img/Nike.jpg" alt="NIKE AIR" />
+          </div>
+          <div class="title">Nike Zoom KD</div>
+          <div class="price">$120</div>
+
+          <div class="color">
+            <p>Color:</p>
+            <label for="green">
+              <span class="green"></span>
+            </label>
+            <label for="purple">
+              <span class="purple"></span>
+            </label>
+            <label for="orange">
+              <span class="orange"></span>
+            </label>
+          </div>
+          <div class="size">
+            <p>Size:</p>
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+          </div>
+          <div class="btn">
+            <button>Buy now</button>
+            <button>Add Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

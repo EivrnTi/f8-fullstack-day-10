@@ -1,0 +1,286 @@
+/* reset.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* product.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Màu nền ví dụ */
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.container {
+    perspective: 1000px; /* Thêm phối cảnh cho hiệu ứng 3D */
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d; /* Giữ hiệu ứng 3D khi xoay */
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Hiệu ứng lật thẻ khi hover (tùy chọn) */
+.product-card:hover {
+    transform: rotateY(10deg);
+}
+
+.cart {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.cart:hover {
+    color: #2575fc;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover .img img {
+    transform: scale(1.05);
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e94e77; /* Màu giá nổi bật */
+    margin-bottom: 25px;
+}
+
+.color,
+.size {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.color p,
+.size p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #555;
+    margin-right: 10px;
+}
+
+.color label {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid transparent; /* Viền trong suốt mặc định */
+    transition: border-color 0.3s ease;
+}
+
+.color label span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0.8); /* Làm nhỏ màu bên trong */
+}
+
+/* Màu sắc của sản phẩm */
+.color .green { background-color: #28a745; }
+.color .purple { background-color: #6f42c1; }
+.color .orange { background-color: #fd7e14; }
+.color .pink { background-color: #e83e8c; }
+
+/* Hiệu ứng khi chọn màu */
+input[type="radio"]:checked + label {
+    border-color: #2575fc; /* Viền xanh khi chọn */
+}
+input[type="radio"]:checked + label span {
+    transform: scale(1); /* Phóng to màu khi chọn */
+    box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.4); /* Thêm hiệu ứng phát sáng */
+}
+
+.size span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #555;
+}
+
+.size span:hover {
+    background-color: #f0f0f0;
+    border-color: #aaa;
+}
+
+.size span:active {
+    background-color: #2575fc;
+    color: #fff;
+    border-color: #2575fc;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn button {
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn button:first-child { /* Buy now */
+    background-color: #2575fc;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+}
+
+.btn button:first-child:hover {
+    background-color: #1a60cc;
+    box-shadow: 0 7px 20px rgba(37, 117, 252, 0.6);
+}
+
+.btn button:last-child { /* Add Cart */
+    background-color: #f0f0f0;
+    color: #555;
+    border: 1px solid #ddd;
+}
+
+.btn button:last-child:hover {
+    background-color: #e0e0e0;
+    color: #333;
+    border-color: #ccc;
+}
+
+/* radio checked */
+#green:checked~.img img {
+    filter: hue-rotate(0deg);
+}
+
+#purple:checked~.img img {
+    filter: hue-rotate(140deg);
+}
+
+#orange:checked~.img img {
+    filter: hue-rotate(270deg);
+}
+
+#pink:checked~.img img {
+    filter: hue-rotate(220deg);
+}
+
+/* title change color */
+#green:checked~.title {
+    color: rgb(40, 167, 69);
+}
+
+#purple:checked~.title {
+    color: rgb(140, 54, 238);
+}
+
+#orange:checked~.title {
+    color: rgb(243, 177, 36);
+}
+
+
+
+/* Button */
+#green:checked~.btn button {
+    background: rgb(40, 167, 69);
+}
+
+#purple:checked~.btn button {
+    background: rgb(140, 54, 238);
+}
+
+#orange:checked~.btn button {
+    background: rgb(243, 177, 36);
+}
+
