@@ -19,6 +19,7 @@ body {
   height: 100vh;
   font-family: inherit;
   font-size: inherit;
+  background-color: cadetblue;
 }
 
 .wrapper {
